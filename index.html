@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WashExpert | Reliable Washing Machine Repair</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Saira:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        saira: ['Saira', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#3f51b5',
+                            600: '#1e3a8a', // Dark Navy Blue
+                            700: '#172554',
+                            900: '#0f172a',
+                        },
+                        accent: {
+                            50: '#f973160a',
+                            500: '#f97316', // Safety Orange
+                            600: '#ea580c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Apply Saira font to all headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .font-saira {
+            font-family: 'Saira', sans-serif;
+        }
+
+        /* Traditional Service Styles */
+        .service-card {
+            border-top: 4px solid transparent;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .service-card:hover {
+            border-top-color: #f97316;
+            background-color: #f8fafc;
+        }
+
+        .form-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* =========================================
+           Custom Testimonial Swiper Styling
+           ========================================= */
+
+        /* Add padding so the cards don't overlap the dots/arrows */
+        .testimonialSwiper {
+            padding-bottom: 50px !important;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* --- Navigation Arrows --- */
+        .testimonialSwiper .swiper-button-next,
+        .testimonialSwiper .swiper-button-prev {
+            background-color: #ffffff;
+            color: #1e3a8a;
+            /* Your Brand Blue */
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect for arrows */
+        .testimonialSwiper .swiper-button-next:hover,
+        .testimonialSwiper .swiper-button-prev:hover {
+            background-color: #f97316;
+            /* Your Accent Orange */
+            color: #ffffff;
+            border-color: #f97316;
+            transform: scale(1.05);
+        }
+
+        /* Adjust icon size inside the arrows */
+        .testimonialSwiper .swiper-button-next::after,
+        .testimonialSwiper .swiper-button-prev::after {
+            font-size: 18px;
+            font-weight: 900;
+        }
+
+        /* Move arrows slightly outward */
+        .testimonialSwiper .swiper-button-next {
+            right: 0px;
+        }
+
+        .testimonialSwiper .swiper-button-prev {
+            left: 0px;
+        }
+
+        /* --- Pagination Dots --- */
+        .testimonialSwiper .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: #cbd5e1;
+            /* Light gray */
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect for inactive dots */
+        .testimonialSwiper .swiper-pagination-bullet:hover {
+            background-color: #1e3a8a;
+            opacity: 0.8;
+        }
+
+        /* Active Dot - Pill shape and Orange color */
+        .testimonialSwiper .swiper-pagination-bullet-active {
+            background-color: #f97316;
+            /* Your Accent Orange */
+            width: 28px;
+            /* Stretches the dot into a pill shape */
+            border-radius: 8px;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 antialiased">
+
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-6 right-6 z-2 flex flex-col gap-16">
+        <div class="flex flex-col items-center text-center">
+
+            <!-- WhatsApp Button (unchanged) -->
+            <a href="https://wa.me/917010693975" target="_blank" class="relative flex items-center justify-center group"
+                aria-label="WhatsApp Us">
+
+                <!-- Glowing Animation Background -->
+                <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-70 animate-ping"
+                    style="animation-delay: 0.3s;"></span>
+
+                <!-- Button -->
+                <span
+                    class="relative inline-flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl transition-transform transform group-hover:scale-110 border-2 border-white">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i>
+                </span>
+            </a>
+
+            <!-- Always Visible Text -->
+            <div class="mt-3">
+                <h4 class="text-lg font-semibold text-green-500">WhatsApp Us</h4>
+                <p class="text-sm text-gray-900">Chat instantly for quick support</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="fixed bottom-6 left-6 z-2 flex flex-col gap-16">
+        <div class="flex flex-col items-center text-center">
+
+            <!-- Icon Button -->
+            <a href="tel:7010693975" class="relative flex items-center justify-center group mb-3"
+                aria-label="24/7 Support">
+                <!-- Glow Animation -->
+                <span
+                    class="absolute inline-flex h-full w-full rounded-full bg-blue-600 opacity-70 animate-ping"></span>
+                <!-- Main Circle -->
+                <span
+                    class="relative inline-flex items-center justify-center w-14 h-14 bg-blue-700 text-white rounded-full shadow-xl transition-transform transform group-hover:scale-110 border-2 border-white">
+                    <i class="fa-solid fa-headset text-xl"></i>
+                </span>
+            </a>
+            <!-- Text -->
+            <h4 class="text-lg font-semibold text-accent-500">24/7 Support</h4>
+            <p class="text-sm text-gray-900">Call anytime for instant help</p>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="bg-brand-700 text-white text-sm py-2 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex space-x-6 font-medium">
+                <span><i class="fa-solid fa-clock text-accent-500 mr-2"></i> Mon - Sat: 8:00 AM - 8:00 PM</span>
+                <span><i class="fa-solid fa-envelope text-accent-500 mr-2"></i> service@washexpert.com</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="hover:text-accent-500 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-accent-500 transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full z-50 bg-white border-b-4 border-accent-500 shadow-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-tools text-2xl text-accent-500"></i>
+                    <span class="text-2xl font-bold tracking-tight text-brand-600 font-saira">Wash<span
+                            class="text-accent-500">Expert</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#services"
+                        class="text-gray-800 hover:text-accent-500 font-bold transition-colors text-sm">Services</a>
+                    <a href="#problems"
+                        class="text-gray-800 hover:text-accent-500 font-bold transition-colors text-sm">Common
+                        Issues</a>
+                    <a href="#process"
+                        class="text-gray-800 hover:text-accent-500 font-bold transition-colors text-sm">How We
+                        Works</a>
+                    <div class="flex items-center gap-3 ml-4 bg-gray-100 px-4 py-2 rounded-sm border border-gray-200">
+                        <div class="text-accent-500 text-xl">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold tracking-wide">24/7 Support</p>
+                            <a href="tel:+1234567890"
+                                class="text-lg font-bold text-brand-600 hover:text-accent-500">(800) 123-4567</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="text-gray-800 hover:text-accent-500 focus:outline-none transition-transform duration-300">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown (Animated) -->
+        <div id="mobile-menu"
+            class="md:hidden overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 bg-gray-50">
+            <div class="px-4 py-6 space-y-4 border-t border-gray-200 shadow-inner flex flex-col">
+                <a href="#services"
+                    class="mobile-link text-gray-800 hover:text-accent-500 font-bold text-lg border-b border-gray-200 pb-2">Services</a>
+                <a href="#problems"
+                    class="mobile-link text-gray-800 hover:text-accent-500 font-bold text-lg border-b border-gray-200 pb-2">Common
+                    Issues</a>
+                <a href="#process"
+                    class="mobile-link text-gray-800 hover:text-accent-500 font-bold text-lg border-b border-gray-200 pb-2">How
+                    We Works</a>
+
+                <div class="mt-4 pt-4 flex items-center gap-4 bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                    <div
+                        class="w-12 h-12 bg-accent-500 text-white rounded-full flex items-center justify-center text-xl shadow-md">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 font-bold tracking-wide uppercase">Call Now</p>
+                        <a href="tel:+1234567890" class="text-xl font-black text-brand-600">(800) 123-4567</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="relative bg-[url('https://webnextpro.com/tf/cm-repair/assets/images/bg-banner-03.jpg')] z-60 bg-cover bg-center">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-brand-900/85"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 lg:py-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-white" data-aos="fade-right">
+                    <div
+                        class="inline-block bg-accent-500 text-white font-bold pl-6 px-4 py-1 rounded-sm text-sm  tracking-wider mb-6">
+                        <span class="w-2 h-2 bg-white absolute rounded-full top-2.5 left-2.5"></span> Available 24/7
+                        - Karumathanpatti, Coimbatore
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 tracking-tight">
+                        Expert Washing Machine <br>
+                        <span class="text-accent-500">Repair Service</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-xl font-medium leading-relaxed">
+                        Same-day doorstep service. Certified technicians. Guaranteed repairs. Don't let a broken washer
+                        disrupt your day—call us now!
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="tel:+1234567890"
+                            class="px-4 py-4 bg-accent-500 text-white font-bold text-xl hover:bg-accent-600 transition-colors flex items-center justify-center gap-3 rounded shadow-lg">
+                            <i class="fa-solid fa-phone text-2xl"></i> (800) 123-4567
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm font-bold">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500 text-xl"></i>
+                            Same Day Service</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500 text-xl"></i>
+                            Upfront Pricing</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500 text-xl"></i>
+                            90-Day Warranty</div>
+                    </div>
+                </div>
+
+                <!-- Right Content: Form -->
+                <div class="lg:col-span-5" data-aos="fade-left">
+                    <div class="bg-white p-8 form-shadow border-t-4 border-accent-500 rounded-lg relative overflow-hidden"
+                        id="book">
+
+                        <div class="absolute top-0 right-0 -mr-8 -mt-8 text-gray-50 opacity-50">
+                            <i class="fa-solid fa-screwdriver-wrench text-9xl"></i>
+                        </div>
+
+                        <div class="text-center mb-8 relative z-10">
+                            <h3 class="text-2xl font-bold text-brand-600 font-saira">Request Service</h3>
+                            <p class="text-gray-500 text-sm mt-2">Fill the form below and get an upfront estimate today.
+                            </p>
+                        </div>
+
+                        <form
+                            onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden');"
+                            class="space-y-5 relative z-10">
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-1.5 tracking-wide">Full Name
+                                        *</label>
+                                    <div class="relative">
+                                        <input type="text" required
+                                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition-colors rounded duration-200"
+                                            placeholder="John Doe">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-1.5 tracking-wide">Phone
+                                        Number *</label>
+                                    <div class="relative">
+                                        <input type="tel" required
+                                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition-colors rounded duration-200"
+                                            placeholder="+91 9837649289">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-1.5 tracking-wide">Email
+                                        Address</label>
+                                    <div class="relative">
+                                        <input type="email"
+                                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition-colors rounded duration-200"
+                                            placeholder="johndoe@example.com">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-1.5 tracking-wide">Primary
+                                        Issue *</label>
+                                    <div class="relative">
+                                        <select required
+                                            class="w-full pl-4 pr-10 py-3 bg-gray-50 border border-gray-200 text-gray-800 text-sm appearance-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition-colors rounded duration-200">
+                                            <option value="" disabled selected>Select Problem</option>
+                                            <option value="power">Won't turn on/start</option>
+                                            <option value="noise">Loud noise/Vibration</option>
+                                            <option value="leak">Leaking water</option>
+                                            <option value="drain">Not draining/Spinning</option>
+                                            <option value="other">Other issue</option>
+                                        </select>
+                                        <div
+                                            class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-400">
+                                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-1.5 tracking-wide">Additional
+                                    Details</label>
+                                <div class="relative">
+                                    <textarea rows="3"
+                                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-800 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition-colors rounded duration-200 resize-none"
+                                        placeholder="Please describe the issue in more detail..."></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full py-4 mt-6 bg-brand-600 text-white font-bold tracking-wider hover:bg-brand-700 transition-colors text-base rounded shadow-md flex justify-center items-center gap-2 group">
+                                Request Appointment <i
+                                    class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform text-sm"></i>
+                            </button>
+                            <p class="text-center text-xs text-gray-400 mt-3 flex items-center justify-center gap-1">
+                                <i class="fa-solid fa-lock text-gray-300"></i> Your information is secure
+                            </p>
+                        </form>
+
+                        <div id="success-msg"
+                            class="hidden absolute inset-0 bg-white/95 backdrop-blur-sm flex flex-col items-center justify-center p-8 text-center border-t-4 border-green-500 z-20 rounded-lg">
+                            <div
+                                class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mb-4 shadow-inner">
+                                <i class="fa-solid fa-check text-3xl"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-900 mb-2 font-saira">Request Sent!</h4>
+                            <p class="text-gray-600 text-sm font-medium">We've received your details. Our dispatch team
+                                will call you shortly to confirm your service window.</p>
+                            <button onclick="document.getElementById('success-msg').classList.add('hidden')"
+                                class="mt-6 px-8 py-2.5 bg-gray-100 text-gray-700 font-bold hover:bg-gray-200 transition rounded text-sm uppercase tracking-wide">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="bg-brand-600 py-6 border-b-4 border-brand-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-brand-500">
+                <div class="text-white">
+                    <h3 class="text-3xl font-bold mb-1">15+</h3>
+                    <p class="text-sm font-bold text-brand-100  tracking-wide">Years Experience</p>
+                </div>
+                <div class="text-white">
+                    <h3 class="text-3xl font-bold mb-1">2400+</h3>
+                    <p class="text-sm font-bold text-brand-100  tracking-wide">Satisfied Clients</p>
+                </div>
+                <div class="text-white">
+                    <h3 class="text-3xl font-bold mb-1">100%</h3>
+                    <p class="text-sm font-bold text-brand-100  tracking-wide">Satisfaction</p>
+                </div>
+                <div class="text-white">
+                    <h3 class="text-3xl font-bold mb-1">10+</h3>
+                    <p class="text-sm font-bold text-brand-100  tracking-wide">Brands Covered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-600 mb-6 font-saira leading-tight">
+                        Best Washing Machine Repair Service in Coimbatore
+                    </h2>
+                    <p class="text-gray-600 font-medium mb-4 leading-relaxed">
+                        Don't let a faulty appliance disrupt your day. WashExpert Services offers fast, reliable, and
+                        affordable home appliance repair services.
+                    </p>
+                    <p class="text-gray-600 font-medium mb-8 leading-relaxed">
+                        From washing machines and refrigerators to ACs and microwaves – our expert technicians diagnose
+                        and fix issues quickly using genuine spare parts, ensuring long-lasting performance. Enjoy
+                        hassle-free doorstep service with transparent pricing and guaranteed workmanship.
+                    </p>
+
+                    <a href="tel:7010693975"
+                        class="inline-flex items-center bg-brand-600 text-white px-6 py-3 rounded font-bold hover:bg-brand-800 transition-colors">
+                        Call Us: 7010693975 <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                        <i class="fa-solid fa-shield-halved text-3xl text-accent-500 mb-4"></i>
+                        <h4 class="text-lg font-bold text-brand-600 mb-2 font-saira">Guaranteed Service Warranty</h4>
+                        <p class="text-gray-600 text-sm">We provide warranty on all repairs, so you can relax knowing
+                            your appliance is in safe hands.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                        <i class="fa-solid fa-truck-fast text-3xl text-accent-500 mb-4"></i>
+                        <h4 class="text-lg font-bold text-brand-600 mb-2 font-saira">Same-Day Doorstep Service</h4>
+                        <p class="text-gray-600 text-sm">Quick response and fast repairs across the city - when you need
+                            it the most.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                        <i class="fa-solid fa-cogs text-3xl text-accent-500 mb-4"></i>
+                        <h4 class="text-lg font-bold text-brand-600 mb-2 font-saira">Genuine Parts & Experts</h4>
+                        <p class="text-gray-600 text-sm">15+ years experienced professionals using only high-quality,
+                            original spare parts.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                        <i class="fa-solid fa-headset text-3xl text-accent-500 mb-4"></i>
+                        <h4 class="text-lg font-bold text-brand-600 mb-2 font-saira">Easy Booking & Support</h4>
+                        <p class="text-gray-600 text-sm">Call or WhatsApp us anytime for quick scheduling and instant
+                            assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-600 mb-4  tracking-tight">We Fix All Types of
+                    Washing Machines</h2>
+                <div class="w-24 h-1 bg-accent-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 font-bold text-lg">From minor fixes to major repairs, we service all washer
+                    types with same-day doorstep support and reliable results.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10">
+
+                <!-- Service 1: Front Load Washers -->
+                <div class="flex flex-col sm:flex-row items-center gap-6 bg-accent-50 p-6 rounded-lg border border-gray-100"
+                    data-aos="fade-up">
+                    <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 relative flex items-center justify-center">
+                        <!-- Custom Vector SVG - Front Load -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+                            class="w-full h-full drop-shadow-sm">
+                            <!-- Machine Body -->
+                            <rect x="20" y="15" width="55" height="65" rx="4" fill="#f8fafc" stroke="#334155"
+                                stroke-width="3" />
+                            <!-- Top Panel -->
+                            <line x1="20" y1="32" x2="75" y2="32" stroke="#334155" stroke-width="3" />
+                            <circle cx="30" cy="23.5" r="3.5" fill="#334155" />
+                            <circle cx="42" cy="23.5" r="3.5" fill="#334155" />
+                            <rect x="55" y="20" width="14" height="7" rx="1.5" fill="#e2e8f0" stroke="#334155"
+                                stroke-width="2" />
+                            <!-- Drum -->
+                            <circle cx="47.5" cy="55" r="16" fill="#e2e8f0" stroke="#334155" stroke-width="3" />
+                            <circle cx="47.5" cy="55" r="10" fill="#f8fafc" stroke="#334155" stroke-width="2" />
+                            <!-- Accent Badge (Sparkles) -->
+                            <circle cx="75" cy="75" r="14" fill="#ffffff" stroke="#334155" stroke-width="2.5" />
+                            <path d="M75 67 v16 M67 75 h16" stroke="#f97316" stroke-width="2.5"
+                                stroke-linecap="round" />
+                            <circle cx="75" cy="75" r="2.5" fill="#f97316" />
+                        </svg>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-xl font-bold text-brand-900 mb-3 font-saira">Front Load Washers</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Drum & Bearing Replacement
+                            Door Seal & Lock Repair
+                            PCB & Display Issues
+                            Water Drainage Fixes
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 2: Top Load Washers -->
+                <div class="flex flex-col sm:flex-row items-center gap-6 bg-accent-50 p-6 rounded-lg border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 relative flex items-center justify-center">
+                        <!-- Custom Vector SVG - Top Load -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+                            class="w-full h-full drop-shadow-sm">
+                            <!-- Machine Body -->
+                            <rect x="25" y="25" width="45" height="60" rx="3" fill="#f8fafc" stroke="#334155"
+                                stroke-width="3" />
+                            <!-- Top Control Panel (angled back) -->
+                            <path d="M25 25 L30 15 L65 15 L70 25 Z" fill="#e2e8f0" stroke="#334155" stroke-width="3"
+                                stroke-linejoin="round" />
+                            <!-- Buttons/Dials -->
+                            <circle cx="35" cy="20" r="2.5" fill="#334155" />
+                            <circle cx="45" cy="20" r="2.5" fill="#334155" />
+                            <circle cx="55" cy="20" r="2.5" fill="#334155" />
+                            <!-- Lid -->
+                            <rect x="30" y="25" width="35" height="18" fill="#e2e8f0" stroke="#334155"
+                                stroke-width="2" />
+                            <!-- Base Lines -->
+                            <line x1="25" y1="75" x2="70" y2="75" stroke="#334155" stroke-width="2" />
+                            <!-- Accent Badge (Water Drop / Up Arrow) -->
+                            <circle cx="75" cy="25" r="14" fill="#ffffff" stroke="#334155" stroke-width="2.5" />
+                            <path d="M75 16 L75 34 M68 23 L75 16 L82 23" stroke="#f97316" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-xl font-bold text-brand-900 mb-3 font-saira">Top Load Washers</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Agitator & Pulsator Repair
+                            Water Inlet Valve Replacement
+                            Spin Tub Balancing
+                            Clutch & Gearbox Repair
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 3: Semi-Automatic Washers -->
+                <div class="flex flex-col sm:flex-row items-center gap-6 bg-accent-50 p-6 rounded-lg border border-gray-100"
+                    data-aos="fade-up">
+                    <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 relative flex items-center justify-center">
+                        <!-- Custom Vector SVG - Semi-Automatic -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+                            class="w-full h-full drop-shadow-sm">
+                            <!-- Machine Body (Wider) -->
+                            <rect x="10" y="25" width="70" height="55" rx="3" fill="#f8fafc" stroke="#334155"
+                                stroke-width="3" />
+                            <!-- Control Panel -->
+                            <rect x="10" y="15" width="70" height="10" fill="#e2e8f0" stroke="#334155" stroke-width="3"
+                                stroke-linejoin="round" />
+                            <!-- Dials -->
+                            <circle cx="20" cy="20" r="2" fill="#334155" />
+                            <circle cx="35" cy="20" r="2" fill="#334155" />
+                            <circle cx="55" cy="20" r="2" fill="#334155" />
+                            <circle cx="70" cy="20" r="2" fill="#334155" />
+                            <!-- Lids (Wash and Spin) -->
+                            <rect x="15" y="25" width="35" height="20" fill="#e2e8f0" stroke="#334155"
+                                stroke-width="2" />
+                            <rect x="55" y="25" width="20" height="20" fill="#e2e8f0" stroke="#334155"
+                                stroke-width="2" />
+                            <!-- Divider line -->
+                            <line x1="52.5" y1="25" x2="52.5" y2="80" stroke="#334155" stroke-width="2" />
+                            <!-- Accent Badge (Two Tubs icon) -->
+                            <circle cx="85" cy="75" r="14" fill="#ffffff" stroke="#334155" stroke-width="2.5" />
+                            <rect x="79" y="69" width="4" height="12" fill="#f97316" />
+                            <rect x="87" y="69" width="4" height="12" fill="#f97316" />
+                        </svg>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-xl font-bold text-brand-900 mb-3 font-saira">Semi-Automatic Washers</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Wash & Spin Motor Repair
+                            Timer Switch Replacement
+                            Drain Selector Fixes
+                            Belt & Pulley Replacements
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 4: Dryers & Combos -->
+                <div class="flex flex-col sm:flex-row items-center gap-6 bg-accent-50 p-6 rounded-lg border border-gray-100"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-32 h-32 md:w-40 md:h-40 shrink-0 relative flex items-center justify-center">
+                        <!-- Custom Vector SVG - Dryer -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+                            class="w-full h-full drop-shadow-sm">
+                            <!-- Machine Body -->
+                            <rect x="20" y="15" width="55" height="65" rx="4" fill="#f8fafc" stroke="#334155"
+                                stroke-width="3" />
+                            <!-- Top Panel -->
+                            <line x1="20" y1="32" x2="75" y2="32" stroke="#334155" stroke-width="3" />
+                            <!-- Dial -->
+                            <circle cx="65" cy="23.5" r="4.5" fill="#334155" />
+                            <!-- Large Drum -->
+                            <circle cx="47.5" cy="55" r="18" fill="#e2e8f0" stroke="#334155" stroke-width="3" />
+                            <!-- Heat waves inside drum -->
+                            <path d="M40 62 Q 43 50, 40 45 M47.5 62 Q 50.5 50, 47.5 45 M55 62 Q 58 50, 55 45"
+                                stroke="#334155" stroke-width="2.5" fill="none" stroke-linecap="round" />
+                            <!-- Accent Badge (Heat/Wind) -->
+                            <circle cx="75" cy="75" r="14" fill="#ffffff" stroke="#334155" stroke-width="2.5" />
+                            <path d="M70 69 q-3 6 0 12 M77 69 q-3 6 0 12" stroke="#f97316" stroke-width="2.5"
+                                fill="none" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-xl font-bold text-brand-900 mb-3 font-saira">Dryers & Combos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Heating Element Replacement
+                            Thermal Fuse & Thermostat
+                            Drum Belt & Roller Repair
+                            Ventilation Cleaning & Fixes
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-600 mb-4  tracking-tight">Our Repair
+                    Services</h2>
+                <div class="w-24 h-1 bg-accent-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 font-bold text-lg">We provide reliable and guaranteed repairs for all types of
+                    washers: Top Load, Front Load, and Compact models.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white border border-gray-200 service-card group shadow-sm" data-aos="fade-up">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/LN/EQ/RO/61011936/washing-machine-installation-services.jpeg"
+                        alt="Repair" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 ">Installation</h3>
+                        <p class="text-gray-600 mb-4 text-sm font-medium">Professional installation for all types of
+                            washing machines with proper water connection and setup.</p>
+                        <a href="tel:7010693975"
+                            class="block text-center w-full bg-accent-50 text-accent-500 font-bold py-2 rounded hover:bg-brand-600 hover:text-white transition-colors">Call
+                            Now</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white border border-gray-200 service-card group shadow-sm" data-aos="fade-up">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKEMvYf4lRkcy2IWchGSl_WzaEPnx84jqfzw&s"
+                        alt="Installation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 ">Repair & Maintenance</h3>
+                        <p class="text-gray-600 mb-4 text-sm font-medium">Expert repair solutions for all major issues
+                            including motor problems, drainage issues, and spin failure.</p>
+                        <a href="tel:7010693975"
+                            class="block text-center w-full bg-accent-50 text-accent-500 font-bold py-2 rounded hover:bg-brand-600 hover:text-white transition-colors">Call
+                            Now</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white border border-gray-200 service-card group shadow-sm" data-aos="fade-up">
+                    <img src="https://www.electrafixbc.ca/wp-content/uploads/2024/09/troubleshooting-your-washing-machine-issue-using-the-diagnostic-mode.png"
+                        alt="Maintenance" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 ">Fault Diagnosis</h3>
+                        <p class="text-gray-600 mb-4 text-sm font-medium">Quick and accurate problem detection using
+                            advanced tools to identify and fix issues efficiently.</p>
+                        <a href="tel:7010693975"
+                            class="block text-center w-full bg-accent-50 text-accent-500 font-bold py-2 rounded hover:bg-brand-600 hover:text-white transition-colors">Call
+                            Now</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white border border-gray-200 service-card group shadow-sm" data-aos="fade-up">
+                    <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/rockcms/2024-05/230412-cleaning-washing-machine-vl-2x1-75a523.jpg"
+                        alt="Drum Cleaning" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 ">Drum Cleaning & Service</h3>
+                        <p class="text-gray-600 mb-4 text-sm font-medium">Deep cleaning service to remove dirt,
+                            bacteria, and odor for better performance and hygiene.</p>
+                        <a href="tel:7010693975"
+                            class="block text-center w-full bg-accent-50 text-accent-500 font-bold py-2 rounded hover:bg-brand-600 hover:text-white transition-colors">Call
+                            Now</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white border border-gray-200 service-card group shadow-sm" data-aos="fade-up">
+                    <img src="https://www.hometech.ae/wp-content/uploads/2025/02/water-leakage-in-washing-machines-damaged-door-seal-hose-or-pump.webp"
+                        alt="PCB Repair" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 ">Water Leakage & Noise Fix</h3>
+                        <p class="text-gray-600 mb-4 text-sm font-medium">Fixing common problems like water leakage,
+                            unusual noise, and vibration issues.</p>
+                        <a href="tel:7010693975"
+                            class="block text-center w-full bg-accent-50 text-accent-500 font-bold py-2 rounded hover:bg-brand-600 hover:text-white transition-colors">Call
+                            Now</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white border border-gray-200 service-card group shadow-sm" data-aos="fade-up">
+                    <img src="https://washingmachineservicecenter.co.in/assets/images/All%20Time/aboutimg/4.png"
+                        alt="Motor Service" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 ">Spare Parts Replacement</h3>
+                        <p class="text-gray-600 mb-4 text-sm font-medium">Genuine spare parts replacement to ensure
+                            durability and long-lasting machine performance.</p>
+                        <a href="tel:7010693975"
+                            class="block text-center w-full bg-accent-50 text-accent-500 font-bold py-2 rounded hover:bg-brand-600 hover:text-white transition-colors">Call
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+            <h3 class="text-xl font-bold text-gray-800 mb-8 font-saira">Brands We Service</h3>
+
+            <!-- Swiper -->
+            <div class="swiper brandsSwiper">
+                <div class="swiper-wrapper items-center">
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/Blue.png" alt="Blue"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/Bosch.png" alt="Bosch"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/Godrej.png" alt="Godrej"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/Haier.png" alt="Haier"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/lg.png" alt="LG"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/samsung.png" alt="Samsung"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/Whirlpool.png" alt="Whirlpool"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/ifb.png" alt="ifb"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/onida.png" alt="onida"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/panasonic.png" alt="panasonic"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/voltas.png" alt="voltas"></div>
+                    <div class="swiper-slide flex justify-center"><img class="w-[150px] object-contain"
+                            src="assets/img/brands/sie.png" alt="siemens"></div>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Problems Section -->
+    <section id="problems" class="py-16 bg-gray-100 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 text-center" data-aos="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-600 mb-4 ">Common Washer Problems</h2>
+                <div class="w-24 h-1 bg-accent-500 mx-auto mb-4"></div>
+                <p class="text-gray-700 font-bold text-lg">Recognize these symptoms? Call us before minor issues become
+                    major failures.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Issue 1: Not Spinning -->
+                <div class="bg-white border border-gray-300 shadow-sm" data-aos="fade-up">
+                    <img src="https://images.ctfassets.net/16nm6vz43ids/SWNppxMXwma79f7YhP6bp/495b80e769858db76a92ed01b42be005/Fix_washer_not_spinning.jpg?fm=webp&q=65"
+                        alt="Not Spinning" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 "><i
+                                class="fa-solid fa-triangle-exclamation text-accent-500 mr-2"></i>Not Spinning</h4>
+                        <p class="text-gray-700 text-sm font-medium">Check belt tension, inspect motor carbon brushes,
+                            or replace faulty lid switch.</p>
+                    </div>
+                </div>
+
+                <!-- Issue 2: Water Leakage -->
+                <div class="bg-white border border-gray-300 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://www.thespruce.com/thmb/ZxCTe3sVHnZxWMCHNzdExU1fdxU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/why-is-my-washing-machine-leaking-2147313-hero-bb494438ea5344e9b9107f91d526920c.jpg"
+                        alt="Water Leakage" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 "><i
+                                class="fa-solid fa-water text-brand-500 mr-2"></i>Water Leakage</h4>
+                        <p class="text-gray-700 text-sm font-medium">Replace damaged door seal/gasket, tighten inlet
+                            hoses, or fix drain pump cracks.</p>
+                    </div>
+                </div>
+
+                <!-- Issue 3: Loud Noise -->
+                <div class="bg-white border border-gray-300 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://appliancerepairexpert.ca/wp-content/uploads/2023/03/washing-machine-squeaking-promo.jpg"
+                        alt="Noise Issue" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 "><i
+                                class="fa-solid fa-volume-high text-accent-500 mr-2"></i>Loud Noise</h4>
+                        <p class="text-gray-700 text-sm font-medium">Replace worn drum bearings, install new shock
+                            absorbers, or remove trapped coins.</p>
+                    </div>
+                </div>
+
+                <!-- Issue 4: Not Draining -->
+                <div class="bg-white border border-gray-300 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://www.thespruce.com/thmb/J9RdYtz505UwkYg8lpf998kJB7c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/washing-machine-wont-drain-2718776-hero-2441a4ba9ea04f9daa3b8662ae75c624.jpg"
+                        alt="Not Draining" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 "><i
+                                class="fa-solid fa-filter-circle-xmark text-brand-500 mr-2"></i>Not Draining</h4>
+                        <p class="text-gray-700 text-sm font-medium">Clean out blocked lint filters, clear drain hose
+                            blockages, or replace faulty drain pump.</p>
+                    </div>
+                </div>
+
+                <!-- Issue 5: Door Won't Open -->
+                <div class="bg-white border border-gray-300 shadow-sm" data-aos="fade-up">
+                    <img src="https://i.ytimg.com/vi/sE8JEb6qRQg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBdNUJUyJ2d4ltPqN0BjYPCuej7Pg"
+                        alt="Door Won't Open" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 "><i
+                                class="fa-solid fa-lock text-accent-500 mr-2"></i>Door Stuck</h4>
+                        <p class="text-gray-700 text-sm font-medium">Faulty door interlock switch, broken handle, or
+                            water still left inside the drum.</p>
+                    </div>
+                </div>
+
+                <!-- Issue 6: Bad Smells -->
+                <div class="bg-white border border-gray-300 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://cdn.images.express.co.uk/img/dynamic/51/590x/secondary/how-to-clean-smelly-washing-machine-4766374.jpg?r=1684749718719"
+                        alt="Bad Odor" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 "><i
+                                class="fa-solid fa-biohazard text-brand-500 mr-2"></i>Bad Odor</h4>
+                        <p class="text-gray-700 text-sm font-medium">Mold and mildew buildup in the door seal or
+                            detergent drawer requiring deep cleaning.</p>
+                    </div>
+                </div>
+
+                <!-- Issue 7: Overfilling -->
+                <div class="bg-white border border-gray-300 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://www.localpintu.com/uploads/service_plan/1731404672images.jpg" alt="Overfilling"
+                        class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 "><i
+                                class="fa-solid fa-arrow-up-from-water-pump text-accent-500 mr-2"></i>Overfilling</h4>
+                        <p class="text-gray-700 text-sm font-medium">Defective water inlet valve or faulty pressure
+                            switch causing the tub to overflow.</p>
+                    </div>
+                </div>
+
+                <!-- Issue 8: Shaking / Vibrating -->
+                <div class="bg-white border border-gray-300 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXO5h48NfSHk0BUdk-D29kyG8nvD-nl97gDg&s"
+                        alt="Vibrating" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <h4 class="text-lg font-bold text-gray-900 mb-2 "><i
+                                class="fa-solid fa-wave-square text-brand-500 mr-2"></i>Excessive Shaking</h4>
+                        <p class="text-gray-700 text-sm font-medium">Unbalanced load, unlevel feet, or broken shock
+                            absorbers and suspension springs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-brand-700 text-white border-y-8 border-brand-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 ">Why Choose WashExpert?</h2>
+                <div class="w-24 h-1 bg-accent-500 mx-auto mb-6"></div>
+                <p class="text-brand-100 font-bold text-lg">We are the most trusted local appliance repair company,
+                    committed to honesty, transparency, and high-quality service.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-brand-800 p-6 border-l-4 border-accent-500" data-aos="fade-up">
+                    <i class="fa-solid fa-stopwatch text-4xl text-accent-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 ">Fast Service</h4>
+                    <p class="text-brand-100 text-sm font-medium">Same-day visits and most repairs completed on the spot
+                        in just one trip.</p>
+                </div>
+
+                <div class="bg-brand-800 p-6 border-l-4 border-accent-500" data-aos="fade-up">
+                    <i class="fa-solid fa-tags text-4xl text-accent-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 ">Upfront Pricing</h4>
+                    <p class="text-brand-100 text-sm font-medium">No hidden fees. You get a clear, solid estimate before
+                        any work begins.</p>
+                </div>
+
+                <div class="bg-brand-800 p-6 border-l-4 border-accent-500" data-aos="fade-up">
+                    <i class="fa-solid fa-cogs text-4xl text-accent-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 ">Genuine Parts</h4>
+                    <p class="text-brand-100 text-sm font-medium">We use 100% original manufacturer replacement parts to
+                        ensure longevity.</p>
+                </div>
+
+                <div class="bg-brand-800 p-6 border-l-4 border-accent-500" data-aos="fade-up">
+                    <i class="fa-solid fa-shield-halved text-4xl text-accent-500 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 ">Solid Warranty</h4>
+                    <p class="text-brand-100 text-sm font-medium">Peace of mind with a 90-day guarantee on both
+                        replacement parts and labor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="process" class="py-20 bg-gray-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 text-center" data-aos="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-600 mb-4 ">4 Simple Steps to Repair</h2>
+                <div class="w-24 h-1 bg-accent-500 mx-auto mb-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-brand-100 -z-0"></div>
+
+                <div class="text-center relative z-10" data-aos="fade-right" data-aos-delay="0">
+                    <div
+                        class="w-24 h-24 mx-auto bg-white border border-accent-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-calendar-check text-3xl text-accent-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">1. Book Service</h4>
+                    <p class="text-gray-600 text-sm">Call us or fill the form to schedule a convenient time slot.</p>
+                </div>
+
+                <div class="text-center relative z-10" data-aos="fade-right" data-aos-delay="100">
+                    <div
+                        class="w-24 h-24 mx-auto bg-white border border-accent-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-user-gear text-3xl text-accent-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">2. Tech Visit</h4>
+                    <p class="text-gray-600 text-sm">Our professional technician arrives and diagnoses the issue.</p>
+                </div>
+
+                <div class="text-center relative z-10" data-aos="fade-right" data-aos-delay="200">
+                    <div
+                        class="w-24 h-24 mx-auto bg-white border border-accent-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-screwdriver-wrench text-3xl text-accent-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">3. Fast Repair</h4>
+                    <p class="text-gray-600 text-sm">We provide an upfront quote and fix the machine immediately.</p>
+                </div>
+
+                <div class="text-center relative z-10" data-aos="fade-right" data-aos-delay="300">
+                    <div
+                        class="w-24 h-24 mx-auto bg-white border border-accent-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-handshake text-3xl text-accent-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">4. Payment</h4>
+                    <p class="text-gray-600 text-sm">Test your machine and pay only when you're fully satisfied.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 ">Customer Reviews</h2>
+                <div class="w-24 h-1 bg-accent-500 mx-auto"></div>
+            </div>
+
+            <!-- Swiper Slider Container -->
+            <div class="swiper testimonialSwiper" data-aos="fade-up">
+                <div class="swiper-wrapper py-4">
+                    <!-- Review 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-gray-50 p-6 border border-gray-200 shadow-sm h-full flex flex-col">
+                            <div class="text-accent-500 text-sm mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 mb-6 text-sm font-medium flex-grow">"Excellent service! My washing
+                                machine was making
+                                a terrible noise. The technician arrived on time, identified a broken bearing
+                                immediately, and
+                                had the spare part in his van. Fixed within an hour!"</p>
+                            <div class="flex items-center gap-4 mt-auto">
+                                <div
+                                    class="w-10 h-10 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold">
+                                    AR</div>
+                                <div>
+                                    <h5 class="text-gray-900 font-bold text-sm ">Amanda Roberts</h5>
+                                    <span class="text-gray-500 text-xs font-bold ">Verified Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-gray-50 p-6 border border-gray-200 shadow-sm h-full flex flex-col">
+                            <div class="text-accent-500 text-sm mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 mb-6 text-sm font-medium flex-grow">"Very professional team. They
+                                gave me a clear
+                                quote over the phone before coming out, and didn't charge a penny more. The front load
+                                washer is
+                                draining perfectly now. Highly recommend!"</p>
+                            <div class="flex items-center gap-4 mt-auto">
+                                <div
+                                    class="w-10 h-10 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold">
+                                    DC</div>
+                                <div>
+                                    <h5 class="text-gray-900 font-bold text-sm ">David Chen</h5>
+                                    <span class="text-gray-500 text-xs font-bold ">Verified Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-gray-50 p-6 border border-gray-200 shadow-sm h-full flex flex-col">
+                            <div class="text-accent-500 text-sm mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 mb-6 text-sm font-medium flex-grow">"Very professional team. They
+                                gave me a clear
+                                quote over the phone before coming out, and didn't charge a penny more. The front load
+                                washer is
+                                draining perfectly now. Highly recommend!"</p>
+                            <div class="flex items-center gap-4 mt-auto">
+                                <div
+                                    class="w-10 h-10 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold">
+                                    DC</div>
+                                <div>
+                                    <h5 class="text-gray-900 font-bold text-sm ">David Chen</h5>
+                                    <span class="text-gray-500 text-xs font-bold ">Verified Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-gray-50 p-6 border border-gray-200 shadow-sm h-full flex flex-col">
+                            <div class="text-accent-500 text-sm mb-4">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 mb-6 text-sm font-medium flex-grow">"I called them on a Sunday
+                                morning and they were
+                                here by noon. Replaced the motherboard on my 5-year-old machine instead of telling me to
+                                buy a
+                                new one. Very honest and reliable business."</p>
+                            <div class="flex items-center gap-4 mt-auto">
+                                <div
+                                    class="w-10 h-10 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold">
+                                    SJ</div>
+                                <div>
+                                    <h5 class="text-gray-900 font-bold text-sm ">Sarah Jenkins</h5>
+                                    <span class="text-gray-500 text-xs font-bold ">Verified Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="bg-accent-500 py-16 border-y-8 border-accent-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 ">Need Fast Washing Machine Repair?</h2>
+            <p class="text-white font-bold text-lg mb-8 max-w-2xl mx-auto">Call us now. No hidden charges, just honest
+                and professional work.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:18001234567"
+                    class="px-8 py-4 bg-brand-600 text-white font-bold  tracking-wider text-xl hover:bg-brand-700 transition-colors shadow-lg flex items-center justify-center gap-3 border-2 border-brand-600 rounded-sm">
+                    <i class="fa-solid fa-phone"></i> (800) 123-4567
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 border-b border-gray-700 pb-8">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-tools text-2xl text-accent-500"></i>
+                        <span class="text-2xl font-bold tracking-tight text-white  font-saira">Wash<span
+                                class="text-accent-500">Expert</span></span>
+                    </div>
+                    <p class="text-sm font-medium mb-6">The leading local appliance repair service. Fast, affordable,
+                        and guaranteed solutions for your home.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-accent-500 transition"><i
+                                class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent-500 transition"><i
+                                class="fa-brands fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent-500 transition"><i
+                                class="fa-brands fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4
+                        class="text-white font-bold mb-4  tracking-wider text-sm border-b-2 border-accent-500 inline-block pb-1">
+                        Services</h4>
+                    <ul class="space-y-2 text-sm font-medium">
+                        <li><a href="#" class="hover:text-accent-500 transition-colors">Washing Machine Repair</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition-colors">New Installation</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition-colors">Drum Deep Cleaning</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition-colors">PCB & Motor Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        class="text-white font-bold mb-4  tracking-wider text-sm border-b-2 border-accent-500 inline-block pb-1">
+                        Quick Links</h4>
+                    <ul class="space-y-2 text-sm font-medium">
+                        <li><a href="#process" class="hover:text-accent-500 transition-colors">How We Work</a></li>
+                        <li><a href="#problems" class="hover:text-accent-500 transition-colors">Common Issues</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition-colors">Pricing Info</a></li>
+                        <li><a href="#" class="hover:text-accent-500 transition-colors">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        class="text-white font-bold mb-4  tracking-wider text-sm border-b-2 border-accent-500 inline-block pb-1">
+                        Contact Info</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-accent-500"></i>
+                            <span>123 Service Road, Industrial Park, NY 10001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-accent-500"></i>
+                            <span>service@washexpert.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-accent-500"></i>
+                            <span class="text-white font-bold text-lg">(800) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-sm font-medium text-center flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2026 WashExpert Repair Services. All rights reserved.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            once: true,
+            offset: 30,
+            duration: 600,
+            easing: 'ease-out-cubic',
+        });
+
+        // Initialize Swiper
+        var swiper = new Swiper(".brandsSwiper", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: { slidesPerView: 3, spaceBetween: 40 },
+                768: { slidesPerView: 4, spaceBetween: 40 },
+                1024: { slidesPerView: 6, spaceBetween: 50 },
+            },
+        });
+
+        var testimonialSwiper = new Swiper(".testimonialSwiper", {
+            slidesPerView: 1, // 1 card on mobile
+            spaceBetween: 24,
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            // Add Pagination
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            // Add Navigation
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: { slidesPerView: 2, spaceBetween: 24 }, // 2 cards on tablet
+                1024: { slidesPerView: 3, spaceBetween: 24 }, // 3 cards on desktop
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const icon = mobileBtn.querySelector('i');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            // Toggle Mobile Menu
+            mobileBtn.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.contains('max-h-96');
+
+                if (isOpen) {
+                    // Close menu
+                    mobileMenu.classList.remove('max-h-96', 'opacity-100');
+                    mobileMenu.classList.add('max-h-0', 'opacity-0');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    // Open menu
+                    mobileMenu.classList.remove('max-h-0', 'opacity-0');
+                    mobileMenu.classList.add('max-h-96', 'opacity-100');
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                    icon.style.transform = 'rotate(90deg)';
+                }
+            });
+
+            // Close menu when clicking a link
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('max-h-96', 'opacity-100');
+                    mobileMenu.classList.add('max-h-0', 'opacity-0');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                    icon.style.transform = 'rotate(0deg)';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
